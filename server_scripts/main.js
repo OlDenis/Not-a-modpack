@@ -1,17 +1,6 @@
 //requires: create_deep_dark, deeperdarker
 // This is a server script for KubeJS.
 
-ItemEvents.rightClicked(event => {
-  let item = event.item;
-  console.log(`Checking attributes for: ${item.id}`);
-
-  let attributes = item.getAttributes();
-  for (let attr in attributes) {
-      console.log(`  Attribute ID: ${attr}, Value: ${attributes[attr]}`);
-  }
-});
-
-
 // Listen for the "recipes" server event.
 ServerEvents.recipes(event => {
      
