@@ -8,11 +8,12 @@ ServerEvents.recipes(event => {
         [
                 'AAA',
                 'ABA', // pattern
-                'AAA'
+                'ACA'
             ],
         {
             A: 'kubejs:old_eye_fragment', //input
-            B: 'minecraft:ender_eye'
+            B: 'minecraft:ender_eye',
+            C: 'garnished:amber_remnant'
         }
     )   
 })

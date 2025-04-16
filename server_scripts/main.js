@@ -1,4 +1,4 @@
-//requires: create_deep_dark, deeperdarker
+//requires: create_deep_dark, deeperdarker, create, garnished
 // This is a server script for KubeJS.
 
 // Listen for the "recipes" server event.
@@ -43,6 +43,14 @@ ServerEvents.recipes(event => {
       'kubejs:reinforced_echo_ingot'                    // arg 4: the upgrade item
     )
   }
+  // Adding Warden hatchet recipe from create : garnished
+    event.remove({output: 'garnished:warden_hatchet'});
+    event.smithing(
+      'garnished:warden_hatchet',                       // arg 1: output
+      'deeperdarker:warden_upgrade_smithing_template',  // arg 2: the smithing template
+      'garnished:netherite_hatchet',                      // arg 3: the item to be upgraded
+      'kubejs:reinforced_echo_ingot'                    // arg 4: the upgrade item
+    )
 
   // Adding reinforced echo ingot recipe
   event.custom({

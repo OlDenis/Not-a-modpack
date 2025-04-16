@@ -20,7 +20,6 @@ PlayerEvents.tick(event => {
     }
     let prefix = "deeperdarker:warden_";
     // Check if the player is wearing the full armor set
-    console.log(checkArmorSet(player, prefix));
     if (checkArmorSet(player, prefix)) {
         // Apply regeneration potion effect
         let potion = event.player.potionEffects
