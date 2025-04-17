@@ -41,10 +41,6 @@ const eyesLootTables = {
     ],
     "rogue": [
         {
-            "id": "minecraft:chests/jungle_temple",
-            "weight": 25
-        },
-        {
             "id": "betterarcheology:archeology/chest_jungle_temple_treasure",
             "weight": 25
         },
@@ -62,11 +58,11 @@ const eyesLootTables = {
     "black": [
         {
             id: "medieval_buildings:chests/ship_barrel",
-            weight: 10
+            weight: 3
         },
         {
             id: "medieval_buildings:chests/ship_chests",
-            weight: 15
+            weight: 3
         }
     ]
 }
@@ -75,8 +71,12 @@ const eyesLootTables = {
 LootJS.modifiers(event => {
     event.addTableModifier("minecraft:chests/desert_pyramid")
         .replaceLoot("endrem:old_eye", "garnished:amber_remnant", true)
-    event.addTableModifier("minecraft:archaeology/desert_pyramid")
-        .replaceLoot("endrem:old_eye", "minecraft:bread", true)
+    event.addTableModifier("minecraft:chests/jungle_temple")
+        .replaceLoot("endrem:rogue_eye", "kubejs:rogue_eye_fragment", true)
+    event.addTableModifier("minecraft:chests/buried_treasure")
+        .replaceLoot("endrem:black_eye", "kubejs:black_eye_fragment", true)
+    event.addTableModifier("minecraft:chests/bastion_treasure")
+        .replaceLoot("endrem:cursed_eye", "kubejs:cursed_eye_fragment", true)
     // Add Eye fragments to loot tables
     event.addTableModifier("nova_structures:chests/lone_citadel/c_vault_boss")
         .randomChance(1.0)

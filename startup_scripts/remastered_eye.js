@@ -25,7 +25,7 @@ let eyes = [
     {
         flavor : 'black',
         name : 'Black',
-        tooltip : 'A fragment of the legendary Black pearl\' pride'
+        tooltip : 'A fragment of the legendary Black pearl\'s pride'
     },
     // Rogue
     {
