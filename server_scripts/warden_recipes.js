@@ -29,7 +29,7 @@ ServerEvents.recipes(event => {
       'deeperdarker:warden_upgrade_smithing_template', // arg 2: the smithing template
       'create_deep_dark:echo_armor_' + piece,          // arg 3: the item to be upgraded
       'deeperdarker:reinforced_echo_shard'             // arg 4: the upgrade item
-    )
+    );
   }
   // Adding the Warden tools recipes  
   for (let tool of tools) {

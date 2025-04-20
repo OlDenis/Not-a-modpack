@@ -48,12 +48,21 @@ const eyesLootTables = {
             "id": "sweety_archaeology:archaeology/ritual_site",
             "weight": 5
         },
+        {
+            "id": "nova_structures:chests/jungle_ruins/jungle_ruins_main_temple",
+            "weight": 5
+        }
     ],
     "cursed": [
         {
             id: "nova_structures:chests/piglin_outstation/vault_piglin_outstation",
             weight: 100
+        },
+        {
+            id: "nova_structures:chests/piglin_donjon/vault_piglin_donjon",
+            weight: 100
         }
+        
     ],
     "black": [
         {
@@ -63,25 +72,52 @@ const eyesLootTables = {
         {
             id: "medieval_buildings:chests/ship_chests",
             weight: 3
+        },
+        {
+            id: "irons_spellbooks:chests/impaled_icebreaker/captain_quarters",
+            weight: 3
+        }
+    ],
+    "lost": [
+        {
+            id: "undergarden:chests/catacombs",
+            weight: 10
+        },
+        {
+            id: "undergarden:entities/forgotten_guardian",
+            weight: 10
         }
     ]
 }
 
-// Replace Old eye by ...
 LootJS.modifiers(event => {
+    // Replace Old eye by amber_remnant
     event.addTableModifier("minecraft:chests/desert_pyramid")
         .replaceLoot("endrem:old_eye", "garnished:amber_remnant", true)
+    // Replace rogue eye by its fragment
     event.addTableModifier("minecraft:chests/jungle_temple")
         .replaceLoot("endrem:rogue_eye", "kubejs:rogue_eye_fragment", true)
+    // Replace black eye by its fragment
     event.addTableModifier("minecraft:chests/buried_treasure")
         .replaceLoot("endrem:black_eye", "kubejs:black_eye_fragment", true)
+    // Replace cursed eye by its fragment
     event.addTableModifier("minecraft:chests/bastion_treasure")
         .replaceLoot("endrem:cursed_eye", "kubejs:cursed_eye_fragment", true)
-    // Add Eye fragments to loot tables
+    // Replace lost eye by its fragment
+    event.addTableModifier("minecraft:chests/abandoned_mineshaft")
+        .replaceLoot("endrem:lost_eye", "minecraft:bread", true)
+    // Add corrupted eye to lone citadel loot tables
     event.addTableModifier("nova_structures:chests/lone_citadel/c_vault_boss")
         .randomChance(1.0)
         .addLoot("endrem:corrupted_eye")
+    // Replace undead soul by skeleton horse trophy
+    event.addTableModifier("minecraft:entities/skeleton_horse")
+        .replaceLoot("endrem:undead_soul", "handcrafted:skeleton_horse_trophy", true)
 })
+
+// const aetherFilter = ItemFilter.custom(item => {
+//     return item.hasTas('')
+// })
 
 // Add Eye fragments to loot tables
 LootJS.lootTables(event => {
@@ -92,4 +128,19 @@ LootJS.lootTables(event => {
                 .addEntry(LootEntry.of("kubejs:" + eye + "_eye_fragment").withWeight(lootTable["weight"]))
         }
     }
+    // Add undead soul to Twilight forest lich
+    event.getLootTable("twilightforest:entities/lich")
+        .firstPool()
+        .addEntry(LootEntry.of("endrem:undead_soul"))
+    // Add nether eye to blaze loot if killed with aether sword
+    event.getLootTable("minecraft:entities/blaze")
+        .firstPool()
+        .addEntry(LootEntry.of("endrem:nether_eye")
+            .withWeight(5)
+            .matchMainHand(ItemFilter.anyOf(
+                ItemFilter.tag("#aether:bronze_dungeon_loot"),
+                ItemFilter.tag("#aether:silver_dungeon_loot"),
+                ItemFilter.tag("#aether:gold_dungeon_loot")
+            ))
+        )
 })

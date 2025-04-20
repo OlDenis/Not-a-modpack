@@ -2,7 +2,7 @@
 // This script add the modified end remaster eyes recipes
 
 ServerEvents.recipes(event => {
-    // Old Eye fragment
+    // Old Eye
     event.shaped(
         Item.of('endrem:old_eye', 1), // arg 1: output
         [
@@ -15,5 +15,83 @@ ServerEvents.recipes(event => {
             B: 'minecraft:ender_eye',
             C: 'garnished:amber_remnant'
         }
-    )   
+    )
+    // Rogue Eye
+    event.shaped(
+        Item.of('endrem:rogue_eye', 1),
+        [
+            'AAA',
+            'ABA', // pattern
+            'ACA'
+        ],
+        {
+            A: 'kubejs:rogue_eye_fragment',
+            B: 'minecraft:ender_eye',
+            C: 'minecraft:redstone'
+        }
+    )
+    // Cursed Eye
+    event.shaped(
+        Item.of('endrem:cursed_eye', 1),
+        [
+            'AAA',
+            'ABA', // pattern
+            'ACA'
+        ],
+        {
+            A: 'kubejs:cursed_eye_fragment',
+            B: 'endermanoverhaul:warped_pearl',
+            C: 'minecraft:blaze_powder'
+        }
+    )
+    // Black Eye
+    event.shaped(
+        Item.of('endrem:black_eye', 1),
+        [
+            'ACA',
+            'CBC', // pattern
+            'ACA'
+        ],
+        {
+            A: 'kubejs:black_eye_fragment',
+            B: 'minecraft:prismarine_shard',
+            C: 'endermanoverhaul:soul_pearl'
+            
+        }
+    )
+    // Lost Eye
+    event.shaped(
+        Item.of('endrem:black_eye', 1),
+        [
+            'ACA',
+            'CBC', // pattern
+            'ACA'
+        ],
+        {
+            A: 'kubejs:lost_eye_fragment',
+            B: 'endermanoverhaul:soul_pearl',
+            C: 'undergarden:utherium_cristal'
+        }
+    )
+    // Exotic Eye
+    event.remove({output:'endrem:exotic_eye'});
+    event.shaped(
+        Item.of('endrem:black_eye', 1),
+        [
+            'ABC',
+            'DEF', // pattern
+            'GHI'
+        ],
+        {
+            A: 'minecraft:bubble_coral',
+            B: 'minecraft:fire_coral',
+            C: 'minecraft:conduit',
+            D: 'tide:luminescent_jellyfish',
+            E: 'endermanoverhaul:bubble_pearl',
+            F: 'minecrat:glow_ink_sac',
+            G: 'minecraf:horned_coral',
+            H: 'tide:deep_aqua_crystal',
+            I: 'minecraft:tube_coral'
+        }
+    )
 })
