@@ -1,7 +1,8 @@
-//requires: create_compressed, create_ironworks, cratedelight
+//requires: create_compressed, create_ironworks, create_things_and_misc, cratedelight, expandeddelight, create_things_and_misc, create
 
 // This script removes duplicate items and recipes from Not a Modpack
 
+// Sturdy sheet blocks
 const create_tm = 'create_things_and_misc:';
 const ssb = 'create_ironworks:sturdy_sheet_block';
 const pssb = 'create_compressed:sturdy_sheet_block';
@@ -9,7 +10,34 @@ const tssb = create_tm + 'sturdy_sheet_block'
 const tss_slab = create_tm + 'sturdy_sheet_slab'
 const tss_stairs = create_tm + 'sturdy_sheet_slab_stairs'
 
+// Rose quartz blocks
+const rq_sheet_block = 'create_ironworks:rose_quartz_block';
+const rq_sheet = 'create_things_and_misc:rose_quartz_sheet';
+const rq_armor = 'create_ironworks:rose_quartz_armor';
+const armor_slots = ['helmet', 'chestplate', 'leggings', 'boots'];
+
+// Salt items
+const salt_bag = 'cratedelight:salt_bag';
+const salt = 'expandeddelight:salt';
+const salt_rock = 'expandeddelight:salt_rock';
+const salt_ore = 'c:ores/salt';
+const salt_compound = 'garnished:salt_compound';
+const crushed_salt = 'garnished:crushed_salt';
+
+// Simply Swords materials
+const ss_materials = [
+    'iron',
+    'gold',
+    'diamond',
+    'netherite',
+    'runic'
+];
+
 ServerEvents.recipes(event => {
+    // THIS LINE IS IMPORTANT!
+    // IT MUST BE THE FIRST LINE IN THE EVENT HANDLER
+    addCreateRecipeHandler(event);   
+
     // Apple crates
     event.remove({output: "cratedelight:apple_crate"});
     // Sturdy sheet blocks
@@ -26,37 +54,133 @@ ServerEvents.recipes(event => {
         );
     event.stonecutting(pssb, ssb);
     event.stonecutting(ssb, pssb);
+    // Rose Quartz Block
+    event.remove({output: rq_sheet_block});
+    for (const slot of armor_slots) {
+        event.remove({output: rq_armor + '_' + slot});
+    }
+    event.shaped(
+        Item.of(rq_sheet_block, 1),
+            [
+                'AAA',
+                'AAA',
+                'AAA'
+            ],
+            {
+                A : rq_sheet
+            }
+        );
+    event.shaped(
+    Item.of(rq_armor + '_helmet', 1),
+        [
+            'AAA',
+            'A A'
+        ],
+        {
+            A : rq_sheet
+        }
+    );
+    event.shaped(
+        Item.of(rq_armor + '_chestplate', 1),
+            [
+                'A A',
+                'AAA',
+                'AAA'
+            ],
+            {
+                A : rq_sheet
+            }
+        );
+    event.shaped(
+        Item.of(rq_armor + '_leggings', 1),
+            [
+                'AAA',
+                'A A',
+                'A A'
+            ],
+            {
+                A : rq_sheet
+            }
+        );
+    event.shaped(   
+        Item.of(rq_armor + '_boots', 1),
+            [
+                'A A',
+                'A A'
+            ],
+            {
+                A : rq_sheet
+            }
+        );
+    // Salt recipes
+    event.remove({id: "expandeddelight:salt"});
+    event.shapeless(
+        Item.of(salt, 9), [salt_bag]
+    );
+    event.remove({output: salt_rock})
+    event.recipes.create.milling(
+        [
+            salt_rock,
+            withChance(salt, 0.18, 3),
+            withChance("create:experience_nugget", 0.05)
+        ],
+        {tag: salt_ore}
+    );
+    event.recipes.create.milling(
+        [
+            Item.of(salt, 2),
+            withChance(salt, 0.15)
+        ],
+        salt_rock
+    );
+    event.recipes.create.milling(
+        [
+            Item.of(salt, 2),
+            withChance(salt, 0.1)
+        ],
+        crushed_salt
+    );
+    event.recipes.create.mixing(
+        salt,
+        {
+            "type": "fluid_stack",
+            "amount": 1000,
+            "fluid": "minecraft:water"
+        }
+    ).heated()
+
+    // Simply Swords spears
+    for (const material of ss_materials) {
+        event.remove({output: 'simplyswords:' + material + '_spear'});                           
+    }
+    // THIS LINE IS ALSO IMPORTANT!
+    // IT MUST BE THE LAST LINE IN THE EVENT HANDLER
+    event.recipes.create.finalize();
 })
 
 // Remove item from EMI/JEI/REI
-RecipeViewerEvents.removeEntriesCompletely('item', event => {
-    event.remove('createdelight:apple_crate')
+RecipeViewerEvents.removeEntries('item', event => {
+    event.remove('cratedelight:apple_crate')
+    for (const material of ss_materials) {
+        event.remove('simplyswords:' + material + '_spear')
+    }
 })
 
-// Change sturdy sheet block duplicate to Polished sturdy sheet block
-ItemEvents.modifyTooltips(event => {
-    event.modify(pssb, tooltip => {
-        // Remove block title
-        tooltip.removeLine(0)
-        // Insert text at top of list
-        tooltip.insert(0, Text.of('Polished Sturdy Sheet Block'))
-    }) // Note: this doesn't change the name of the item in wthit or EMI
-    event.modify(tssb, tooltip => {
-        // Remove block title
-        tooltip.removeLine(0)
-        // Insert text at top of list
-        tooltip.insert(0, Text.of('Train Block'))
-    }) // Note: this doesn't change the name of the item in wthit or EMI
-    event.modify(tss_slab, tooltip => {
-        // Remove block title
-        tooltip.removeLine(0)
-        // Insert text at top of list
-        tooltip.insert(0, Text.of('Train Block Slab'))
-    }) // Note: this doesn't change the name of the item in wthit or EMI
-    event.modify(tss_stairs, tooltip => {
-        // Remove block title
-        tooltip.removeLine(0)
-        // Insert text at top of list
-        tooltip.insert(0, Text.of('Train Block Stairs'))
-    }) // Note: this doesn't change the name of the item in wthit or EMI
+// Remove items from loot tables
+// Spear filter that keeps sword on a stick in loot tables
+const spearFilter = ItemFilter.allOf(
+    '#simplyswords:spears',
+    '!simplyswords:sword_on_a_stick'
+);
+
+LootJS.modifiers(event => {
+    event.addTableModifier(LootType.CHEST).removeLoot(spearFilter)
 })
+
+// Remove tags from items
+// ServerEvents.tags('item', event => {
+//     for (const material of ['iron', 'gold', 'diamond']) {
+//         event.removeAllTagsFrom('simplyswords:' + material + '_spear');
+//     }
+// });
+

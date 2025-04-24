@@ -103,9 +103,12 @@ LootJS.modifiers(event => {
     // Replace cursed eye by its fragment
     event.addTableModifier("minecraft:chests/bastion_treasure")
         .replaceLoot("endrem:cursed_eye", "kubejs:cursed_eye_fragment", true)
-    // Replace lost eye by its fragment
+    // Replace lost eye by bread
     event.addTableModifier("minecraft:chests/abandoned_mineshaft")
         .replaceLoot("endrem:lost_eye", "minecraft:bread", true)
+    // Replace corrupted eye by bread
+    event.addTableModifier("minecraft:chests/pillager_outpost")
+        .removeLoot("endrem:corrupted_eye")
     // Add corrupted eye to lone citadel loot tables
     event.addTableModifier("nova_structures:chests/lone_citadel/c_vault_boss")
         .randomChance(1.0)
@@ -136,7 +139,7 @@ LootJS.lootTables(event => {
     event.getLootTable("minecraft:entities/blaze")
         .firstPool()
         .addEntry(LootEntry.of("endrem:nether_eye")
-            .withWeight(5)
+            .withWeight(0.05)
             .matchMainHand(ItemFilter.anyOf(
                 ItemFilter.tag("#aether:bronze_dungeon_loot"),
                 ItemFilter.tag("#aether:silver_dungeon_loot"),
