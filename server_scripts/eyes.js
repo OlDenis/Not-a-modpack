@@ -62,11 +62,11 @@ const eyesLootTables = {
     "black": [
         {
             id: "medieval_buildings:chests/ship_barrel",
-            weight: 10
+            weight: 5
         },
         {
             id: "medieval_buildings:chests/ship_chests",
-            weight: 15
+            weight: 5
         }
     ]
 }
