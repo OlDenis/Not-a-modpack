@@ -1,4 +1,4 @@
-//requires: create_compressed, create_ironworks, create_things_and_misc, cratedelight, expandeddelight, create_things_and_misc, create
+//requires: create_compressed, create_ironworks, create_things_and_misc, cratedelight, expandeddelight, create_things_and_misc, create, simplyswords
 
 // This script removes duplicate items and recipes from Not a Modpack
 
