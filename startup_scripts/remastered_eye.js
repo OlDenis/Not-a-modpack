@@ -38,9 +38,8 @@ let eyes = [
 // This function is used to create the eye fragments items
 StartupEvents.registry('item', event => {
     for (let eye of eyes) {
-        console.log(eye['flavor'])
         event.create(`${eye['flavor']}_eye_fragment`)
             .displayName(`${eye['name']} Eye Fragment`)
-            .tooltip(eye['tooltip'])
+            .tooltip(Text.gray(eye['tooltip']))
     }
 })

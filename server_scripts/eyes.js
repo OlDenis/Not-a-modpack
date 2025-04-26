@@ -1,3 +1,5 @@
+//requires: endrem, betterarcheology, betterdeserttemples, medieval_buildings, irons_spellbooks, undergarden, nova_structures, terralith, sweety_archaeology, aether, twilightforest, betterarcheology, betterdeserttemples, medieval_buildings, irons_spellbooks, undergarden, nova_structures, terralith, sweety_archaeology, aether, twilightforest, handcrafted
+
 // Replace End remaster's eyes with shards that will be used to craft them
 // Old Eye fragment loot tables
 const eyesLootTables = {
@@ -36,6 +38,10 @@ const eyesLootTables = {
         },
         {
             "id": "nova_structures:archaelogy/desert_ruin_inside_temple",
+            "weight": 80
+        },
+        {
+            "id": "nova_structures:archaelogy/desert_ruin_ruins",
             "weight": 80
         }
     ],
