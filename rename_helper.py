@@ -22,6 +22,12 @@ def build_dir(path):
         current_path += folder + '/'
         if not os.path.exists(current_path):
             new_dir(current_path)
+
+def create_json_file(path, mod, mod_dict):
+    build_dir(f'{path}/{mod}/lang')
+    with open(f'{path}/{mod}/lang/en_us.json', 'w') as f:
+        json.dump(mod_dict, f, indent=4)
+
             
 
 # path of the folder where the json file will be created
@@ -71,9 +77,21 @@ for mod, weapons_list in weapons.items():
             key = f'item.{mod}.{material}_{weapon}'
             value = f'{material.capitalize()} {names[mod]} {weapon.replace("_", " ").title()}'
             mod_dict[key] = value
-    build_dir(f'{path}/{mod}/lang')
-    with open(f'{path}/{mod}/lang/en_us.json', 'w') as f:
-        json.dump(mod_dict, f, indent=4)
+    create_json_file(path, mod, mod_dict)
+
+mod = 'simplyswords'
+ss_dict = {}
+ss_materials = [
+    'iron',
+    'gold',
+    'diamond',
+    'netherite',
+    'runic'
+]
+# add the items to the dictionary
+for material in ss_materials:
+    ss_dict[f'{mod}:{material}_katana'] = f'{material.capitalize()} Ninjatō'
+create_json_file(path, mod, ss_dict)
 
 """
 Create: Ironworks renames
@@ -119,6 +137,4 @@ for item in items:
     ironworks_dict[f'item.create_ironworks.steel_{item}'] = f'Industrial Steel {item.replace("armor_", "").title()}'
 
 # write the dict to a json file
-build_dir(f'{path}/{mod}/lang')
-with open(f'{path}/{mod}/lang/en_us.json', 'w') as f:
-    json.dump(ironworks_dict, f, indent=4)
+create_json_file(path, mod, ironworks_dict)
