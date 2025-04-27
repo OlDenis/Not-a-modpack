@@ -1,4 +1,5 @@
-// requires: endrem
+// requires: endrem, endermanoverhaul, garnished, undergarden, tide
+
 // This script add the modified end remaster eyes recipes
 
 ServerEvents.recipes(event => {
@@ -54,14 +55,13 @@ ServerEvents.recipes(event => {
         ],
         {
             A: 'kubejs:black_eye_fragment',
-            B: 'minecraft:prismarine_shard',
-            C: 'endermanoverhaul:soul_pearl'
-            
+            B: 'endermanoverhaul:soul_pearl',
+            C: 'minecraft:prismarine_shard'
         }
     )
     // Lost Eye
     event.shaped(
-        Item.of('endrem:black_eye', 1),
+        Item.of('endrem:lost_eye', 1),
         [
             'ACA',
             'CBC', // pattern
@@ -70,13 +70,13 @@ ServerEvents.recipes(event => {
         {
             A: 'kubejs:lost_eye_fragment',
             B: 'endermanoverhaul:soul_pearl',
-            C: 'undergarden:utherium_cristal'
+            C: 'undergarden:utherium_crystal'
         }
     )
     // Exotic Eye
     event.remove({output:'endrem:exotic_eye'});
     event.shaped(
-        Item.of('endrem:black_eye', 1),
+        Item.of('endrem:exotic_eye', 1),
         [
             'ABC',
             'DEF', // pattern
@@ -88,8 +88,8 @@ ServerEvents.recipes(event => {
             C: 'minecraft:conduit',
             D: 'tide:luminescent_jellyfish',
             E: 'endermanoverhaul:bubble_pearl',
-            F: 'minecrat:glow_ink_sac',
-            G: 'minecraf:horned_coral',
+            F: 'minecraft:glow_ink_sac',
+            G: 'minecraft:horned_coral',
             H: 'tide:deep_aqua_crystal',
             I: 'minecraft:tube_coral'
         }

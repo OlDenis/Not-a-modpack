@@ -117,7 +117,7 @@ ServerEvents.recipes(event => {
     event.shapeless(
         Item.of(salt, 9), [salt_bag]
     );
-    event.remove({output: salt_rock})
+    event.remove({output: salt_rock});
     event.recipes.create.milling(
         [
             salt_rock,
