@@ -73,11 +73,11 @@ const eyesLootTables = {
     "black": [
         {
             id: "medieval_buildings:chests/ship_barrel",
-            weight: 3
+            weight: 0.3
         },
         {
             id: "medieval_buildings:chests/ship_chests",
-            weight: 3
+            weight: 0.3
         },
         {
             id: "irons_spellbooks:chests/impaled_icebreaker/captain_quarters",
@@ -91,6 +91,20 @@ const eyesLootTables = {
         },
         {
             id: "undergarden:entities/forgotten_guardian",
+            weight: 10
+        }
+    ],
+    "cold": [
+        {
+            id: "terralith:spire/rare",
+            weight: 10
+        },
+        {
+            id: "nova_structures:chests/stray_fort_tresure",
+            weight: 10
+        },
+        {
+            id: "irons_spellbooks:chests/mountain_tower/mountain_tower",
             weight: 10
         }
     ]
@@ -122,7 +136,13 @@ LootJS.modifiers(event => {
     // Replace undead soul by skeleton horse trophy
     event.addTableModifier("minecraft:entities/skeleton_horse")
         .replaceLoot("endrem:undead_soul", "handcrafted:skeleton_horse_trophy", true)
-})
+    // Replace Gardian eye by Gardian eye sklera
+        event.addTableModifier("minecraft:entities/elder_guardian")
+            .replaceLoot("endrem:guardian_eye", "kubejs:guardian_eye_sclera", true)
+    // Replace Gardian eye by Gardian eye sklera
+        event.addTableModifier("minecraft:chests/igloo_chest")
+            .replaceLoot("endrem:cold_eye", "kubejs:cold_eye_fragment", true)
+    })
 
 // const aetherFilter = ItemFilter.custom(item => {
 //     return item.hasTas('')

@@ -57,3 +57,20 @@ ServerEvents.recipes(event => {
     // IT MUST BE THE LAST LINE IN THE EVENT HANDLER
     event.recipes.create.finalize();
 })
+
+// Add washing output to crushed deepslate block breaking
+LootJS.modifiers(event => {
+    event.addTableModifier("kubejs:blocks/crushed_deepslate")
+    .addLoot(LootEntry.of("kubejs:deepslate_chunk")
+        .randomChance(0.15)
+        .setCount([1, 3]),
+    LootEntry.of("create:zinc_nugget")
+        .randomChance(0.10)
+        .setCount([1, 2]),
+    LootEntry.of("create:iron_nugget")
+        .randomChance(0.02)
+        .setCount([1, 2]),
+    LootEntry.of("create_d2d:diamond_shard")
+        .randomChance(0.005)
+    )
+})

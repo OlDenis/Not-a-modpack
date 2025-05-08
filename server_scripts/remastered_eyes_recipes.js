@@ -1,4 +1,4 @@
-// requires: endrem, endermanoverhaul, garnished, undergarden, tide
+// requires: endrem, endermanoverhaul, garnished, undergarden, tide, benssharks, irons_spellbooks
 
 // This script add the modified end remaster eyes recipes
 
@@ -7,10 +7,10 @@ ServerEvents.recipes(event => {
     event.shaped(
         Item.of('endrem:old_eye', 1), // arg 1: output
         [
-                'AAA',
-                'ABA', // pattern
-                'ACA'
-            ],
+            'AAA',
+            'ABA', // pattern
+            'ACA'
+        ],
         {
             A: 'kubejs:old_eye_fragment', //input
             B: 'minecraft:ender_eye',
@@ -89,9 +89,52 @@ ServerEvents.recipes(event => {
             D: 'tide:luminescent_jellyfish',
             E: 'endermanoverhaul:bubble_pearl',
             F: 'minecraft:glow_ink_sac',
-            G: 'minecraft:horned_coral',
+            G: 'minecraft:horn_coral',
             H: 'tide:deep_aqua_crystal',
             I: 'minecraft:tube_coral'
         }
     )
+    // Guardian Eye
+    event.shaped(
+        Item.of('endrem:guardian_eye', 1),
+        [
+            'ABA',
+            'DCD', // pattern
+            'BAB'
+        ],
+        {
+            A: 'kubejs:guardian_eye_sclera',
+            C: 'endermanoverhaul:bubble_pearl',
+            B: 'benssharks:axoleather',
+            D: 'minecraft:blaze_powder'
+
+        }
+    )
+    // Cold Eye
+    event.shaped(
+        Item.of('endrem:cold_eye', 1),
+        [
+            'BDB',
+            'ACA', // pattern
+            'BAB'
+        ],
+        {
+            B: 'kubejs:cold_eye_fragment',
+            C: 'endermanoverhaul:icy_pearl',
+            A: 'deeperdarker:ice_lily',
+            D: 'irons_spellbooks:permafrost_shard'
+        }
+    )
+    // Witch Eye
+    event.remove({output:'endrem:witch_eye'});
+    event.shapeless(
+        Item.of('endrem:witch_eye'),
+        [
+            'minecraft:ender_eye',
+            'endrem:witch_pupil',
+            'ars_nouveau:abjuration_essence',
+            '2x minecraft:nether_wart',
+            'minecraft:glistering_melon_slice'
+        ]
+    )//.damageIngredient('elixirium:alchemist_eye', 1)
 })
