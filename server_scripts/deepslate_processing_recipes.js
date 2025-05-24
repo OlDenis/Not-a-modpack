@@ -8,6 +8,15 @@ const ds_chunk = "kubejs:deepslate_chunk";
 const cobbled_ds = "minecraft:cobbled_deepslate";
 const ds = "minecraft:deepslate";
 
+ServerEvents.tags("item", event => {
+    // Create new tags for deepstone blocks
+    event.add('kubejs:deepstone', 'kubejs:deepstone');
+    event.add('kubejs:deepstone', 'kubejs:chiseled_deepstone');
+
+    event.add('kubejs:cut_deepstone', 'kubejs:cut_deepstone');
+    event.add('kubejs:cut_deepstone', 'kubejs:deepstone');
+})
+
 ServerEvents.recipes(event => {
     // THIS LINE IS IMPORTANT!
     // IT MUST BE THE FIRST LINE IN THE EVENT HANDLER
@@ -37,8 +46,8 @@ ServerEvents.recipes(event => {
             "kubejs:deepsand",
             withChance(ds_chunk, 0.01)
         ],       
-        ds
-    ).id("crushing_deepslate");
+        crushed_ds
+    ).id("deepsand");
 
     // Deepslate chunks to cobbled deepslate
     event.shaped(
@@ -74,6 +83,179 @@ ServerEvents.recipes(event => {
         "kubejs:deepsand"
     );
 
+    // Deepstone blocks
+
+    // Deepstone
+    event.recipes.shaped(
+        "kubejs:deepstone",
+        [
+            "AA",
+            "AA"
+        ],
+        {
+            "A": "kubejs:deepsand"
+        }
+    )
+    event.recipes.shaped(
+        "kubejs:deepstone_slab",
+        [
+            "AAA"
+        ],
+        {
+            "A": "#kubejs:deepstone"
+        }
+    )
+    event.recipes.shaped(
+        "kubejs:deepstone_stairs",
+        [
+            "A  ",
+            "AA ",
+            "AAA"
+        ],
+        {
+            "A": "#kubejs:deepstone"
+        }
+    )
+    event.recipes.shaped(
+        "kubejs:deepstone_wall",
+        [
+            "AAA",
+            "AAA"
+        ],
+        {
+            "A": "#kubejs:deepstone"
+        }
+    )
+    event.recipes.stonecutting(
+        "2x kubejs:deepstone_slab",
+        "kubejs:deepstone"
+    ).id("deepstone_slab_from_cutting")
+    event.recipes.stonecutting(
+        "kubejs:deepstone_stairs",
+        "kubejs:deepstone"
+    ).id("deepstone_stairs_from_cutting")
+    event.recipes.stonecutting(
+        "kubejs:deepstone_wall",
+        "kubejs:deepstone"
+    ).id("deepstone_wall_from_cutting")
+
+    // Chiseled Deepstone
+    event.recipes.shaped(
+        "kubejs:chiseled_deepstone",
+        [
+            "A",
+            "A"
+        ],
+        {
+            "A": "kubejs:deepstone_slab"
+        }
+    )
+    event.recipes.stonecutting(
+        "kubejs:chiseled_deepstone",
+        "kubejs:deepstone"
+    )
+
+    // Cut Deepstone
+    event.recipes.shaped(
+        "kubejs:cut_deepstone",
+        [
+            "AA",
+            "AA"
+        ],
+        {
+            "A": "kubejs:deepstone"
+        }
+    )
+    event.recipes.shaped(
+        "kubejs:cut_deepstone_slab",
+        [
+            "AAA"
+        ],
+        {
+            "A": "kubejs:cut_deepstone"
+        }
+    )
+    event.recipes.shaped(
+        "kubejs:cut_deepstone_stairs",
+        [
+            "A  ",
+            "AA ",
+            "AAA"
+        ],
+        {
+            "A": "kubejs:cut_deepstone"
+        }
+    )
+    event.recipes.shaped(
+        "kubejs:cut_deepstone_wall",
+        [
+            "AAA",
+            "AAA"
+        ],
+        {
+            "A": "kubejs:cut_deepstone"
+        }
+    )
+    event.recipes.stonecutting(
+        "2x kubejs:cut_deepstone_slab",
+        "#kubejs:cut_deepstone"
+    ).id("cut_deepstone_slab_from_cutting")
+    event.recipes.stonecutting(
+        "kubejs:cut_deepstone_stairs",
+        "#kubejs:cut_deepstone"
+    ).id("cut_deepstone_stairs_from_cutting")
+    event.recipes.stonecutting(
+        "kubejs:cut_deepstone_wall",
+        "#kubejs:cut_deepstone"
+    ).id("cut_deepstone_wall_from_cutting")
+
+    // Smooth Deepstone
+    event.recipes.smelting(
+        "kubejs:smooth_deepstone",
+        "kubejs:deepstone"
+    );
+    event.recipes.shaped(
+        "kubejs:smooth_deepstone_slab",
+        [
+            "AAA"
+        ],
+        {
+            "A": "kubejs:smooth_deepstone"
+        }
+    )
+    event.recipes.shaped(
+        "kubejs:smooth_deepstone_stairs",
+        [
+            "A  ",
+            "AA ",
+            "AAA"
+        ],
+        {
+            "A": "kubejs:smooth_deepstone"
+        }
+    )
+    event.recipes.shaped(
+        "kubejs:smooth_deepstone_wall",
+        [
+            "AAA",
+            "AAA"
+        ],
+        {
+            "A": "kubejs:smooth_deepstone"
+        }
+    )
+    event.recipes.stonecutting(
+        "2x kubejs:smooth_deepstone_slab",
+        "kubejs:smooth_deepstone"
+    ).id("smooth_deepstone_slab_from_cutting");
+    event.recipes.stonecutting(
+        "kubejs:smooth_deepstone",
+        "kubejs:smooth_deepstone_stairs"
+    ).id("smooth_deepstone_stairs_from_cutting");
+    event.recipes.stonecutting(
+        "kubejs:smooth_deepstone",
+        "kubejs:smooth_deepstone_wall"
+    ).id("smooth_deepstone_wall_from_cutting");
     
     // THIS LINE IS ALSO IMPORTANT!
     // IT MUST BE THE LAST LINE IN THE EVENT HANDLER

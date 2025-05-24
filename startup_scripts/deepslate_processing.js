@@ -36,9 +36,11 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-    // Deepstone Stairs
-    event.create('deepstone_stairs', 'stairs')
+        .tagBlock('kubejs:deepstone')
+        .tagBlock('kubejs:cut_deepstone')
+        
+        // Deepstone Stairs
+        event.create('deepstone_stairs', 'stairs')
         .displayName('Deepstone Stairs')
         .fullBlock(true)
         .soundType('deepslate')
@@ -48,10 +50,11 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-        .texture('up','kubejs:smooth_deepstone')
+        .texture('up','kubejs:smooth_deepstone/stairs')
+        .tagBlock('kubejs:deepstone')
         
-    // Deepstone Slab
-    event.create('deepstone_slab', 'slab')
+        // Deepstone Slab
+        event.create('deepstone_slab', 'slab')
         .displayName('Deepstone Slab')
         .fullBlock(true)
         .soundType('deepslate')
@@ -61,10 +64,11 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
+        .tagBlock('kubejs:deepstone/slab')
         .texture('up', 'kubejs:smooth_deepstone')
         
-    // Deepstone wall
-    event.create('deepstone_wall', 'wall')
+        // Deepstone wall
+        event.create('deepstone_wall', 'wall')
         .displayName('Deepstone Wall')
         .fullBlock(true)
         .soundType('deepslate')
@@ -74,9 +78,10 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-    // Cut Deepstone
-    event.create('cut_deepstone')
+        .tagBlock('kubejs:deepstone/wall')
+        
+        // Cut Deepstone
+        event.create('cut_deepstone')
         .fullBlock(true)
         .soundType('deepslate')
         .hardness(3)
@@ -85,9 +90,11 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-    // Deepstone Stairs
-    event.create('cut_deepstone_stairs', 'stairs')
+        .tagBlock('kubejs:deepstone')
+        .tagBlock('kubejs:cut_deepstone')
+        
+        // Deepstone Stairs
+        event.create('cut_deepstone_stairs', 'stairs')
         .displayName('Cut Deepstone Stairs')
         .fullBlock(true)
         .soundType('deepslate')
@@ -98,9 +105,10 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
         .texture('up', 'kubejs:smooth_deepstone')
-
-    // Cut Deepstone Slab
-    event.create('cut_deepstone_slab', 'slab')
+        .tagBlock('kubejs:deepstone/stairs')
+        
+        // Cut Deepstone Slab
+        event.create('cut_deepstone_slab', 'slab')
         .fullBlock(true)
         .soundType('deepslate')
         .hardness(3)
@@ -109,9 +117,10 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-    // Cut Deepstone Wall
-    event.create('cut_deepstone_wall', 'wall')
+        .tagBlock('kubejs:deepstone/slab')
+        
+        // Cut Deepstone Wall
+        event.create('cut_deepstone_wall', 'wall')
         .fullBlock(true)
         .soundType('deepslate')
         .hardness(3)
@@ -120,9 +129,10 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-    // Chiseled Deepstone
-    event.create('chiseled_deepstone')
+        .tagBlock('kubejs:deepstone/wall')
+        
+        // Chiseled Deepstone
+        event.create('chiseled_deepstone')
         .fullBlock(true)
         .soundType('deepslate')
         .hardness(3)
@@ -131,9 +141,10 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-    // Smooth Deepstone
-    event.create('smooth_deepstone')
+        .tagBlock('kubejs:deepstone')
+        
+        // Smooth Deepstone
+        event.create('smooth_deepstone')
         .fullBlock(true)
         .soundType('deepslate')
         .hardness(3)
@@ -142,9 +153,10 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-    // Smooth Deepstone Stairs
-    event.create('smooth_deepstone_stairs','stairs')
+        .tagBlock('kubejs:smooth_deepstone')
+        
+        // Smooth Deepstone Stairs
+        event.create('smooth_deepstone_stairs','stairs')
         .fullBlock(true)
         .soundType('deepslate')
         .hardness(3)
@@ -153,9 +165,10 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-    // Smooth Deepstone Slab
-    event.create('smooth_deepstone_slab','slab')
+        .tagBlock('kubejs:smooth_deepstone/stairs')
+        
+        // Smooth Deepstone Slab
+        event.create('smooth_deepstone_slab','slab')
         .fullBlock(true)
         .soundType('deepslate')
         .hardness(3)
@@ -164,9 +177,10 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-    // Smooth Deepstone Wall
-    event.create('smooth_deepstone_wall','wall')
+        .tagBlock('kubejs:smooth_deepstone/slab')
+        
+        // Smooth Deepstone Wall
+        event.create('smooth_deepstone_wall','wall')
         .fullBlock(true)
         .soundType('deepslate')
         .hardness(3)
@@ -175,9 +189,10 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-
-})
-
+        .tagBlock('kubejs:smooth_deepstone/wall')
+        
+    })
+    
 StartupEvents.registry('item', event => {
     event.create('deepslate_chunk')
         .displayName('Deepslate Chunk')
