@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab_top",
+    "textures": {
+      "bottom": "kubejs:block/deepstone_bottom",
+      "side": "kubejs:block/deepstone_side",
+      "top": "kubejs:block/smooth_deepstone"
+    }
+  }

@@ -1,0 +1,8 @@
+{
+    "parent": "kubejs:block/template_wall_side",
+    "textures": {
+      "wall": "kubejs:block/deepstone_side",
+      "wall_top": "kubejs:block/smooth_deepstone",
+      "wall_bottom": "kubejs:block/deepstone_bottom"
+    }
+  }

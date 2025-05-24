@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing(
         [
             crushed_ds,
-            withChance(ds_chunk, 0.15)
+            withChance(ds_chunk, 0.05)
         ], 
        cobbled_ds
     ).id("crushing_cobbled_deepslate");

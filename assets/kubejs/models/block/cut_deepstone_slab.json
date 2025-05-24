@@ -1,0 +1,8 @@
+{
+    "parent": "kubejs:block/slab",
+    "textures": {
+      "bottom": "kubejs:block/smooth_deepstone",
+      "side": "kubejs:block/cut_deepstone_side",
+      "top": "kubejs:block/smooth_deepstone"
+    }
+  }
