@@ -16,7 +16,7 @@ ServerEvents.recipes(event => {
     // Cobbled deepslate to crushed deepslate
     event.recipes.create.crushing(
         [
-            crushed_ds,
+            withChance(crushed_ds, 0.85),
             withChance(ds_chunk, 0.15)
         ], 
        cobbled_ds
@@ -25,8 +25,17 @@ ServerEvents.recipes(event => {
     // Deepslate to cobbled deepslate
     event.recipes.create.crushing(
         [
-            cobbled_ds,
+            withChance(cobbled_ds, 0.9),
             withChance(ds_chunk, 0.1)
+        ],       
+        ds
+    ).id("crushing_deepslate");
+
+    // Cobbled deepslate to deepsand
+    event.recipes.create.crushing(
+        [
+            "kubejs:deepsand",
+            withChance(ds_chunk, 0.01)
         ],       
         ds
     ).id("crushing_deepslate");
@@ -49,10 +58,23 @@ ServerEvents.recipes(event => {
             withChance(ds_chunk, 0.125, 3),
             withChance("create:zinc_nugget", 0.15, 1),
             withChance("minecraft:iron_nugget", 0.02, 1),
-            withChance("create_d2d:diamond_shard", 0.005, 1),
         ], 
         crushed_ds
     );
+
+    // Washing deepsand
+    event.recipes.create.splashing(
+        [
+            withChance(ds_chunk, 0.05, 3),
+            withChance("create:copper_nugget", 0.15, 1),
+            withChance("minecraft:amethyst_shard", 0.02, 1),
+            withChance("minecraft:amethyst_shard", 0.12, 3),
+            withChance("create_d2d:diamond_shard", 0.005, 1),
+        ], 
+        "kubejs:deepsand"
+    );
+
+    
     // THIS LINE IS ALSO IMPORTANT!
     // IT MUST BE THE LAST LINE IN THE EVENT HANDLER
     event.recipes.create.finalize();
