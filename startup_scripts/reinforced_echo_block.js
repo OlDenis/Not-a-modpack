@@ -13,21 +13,6 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:mineable/pickaxe') // need a pickaxe
         .tagBlock('minecraft:needs_diamond_tool') // the tool tier must be at least diamond
         .property(BlockProperties.AXIS) // Allows the block to be placed in different orientations (x, y, z) like logs
-        .placementState(event => event.set(BlockProperties.AXIS, event.clickedFace.axis))
-        .blockstateJson = {
-            "variants": {
-                "axis=x": {
-                    "model": "kubejs:block/" + blockName,
-                    "x": 90,
-                    "y": 90
-                },
-                "axis=y": {
-                    "model": "kubejs:block/" + blockName
-                },
-                "axis=z": {
-                    "model": "kubejs:block/" + blockName,
-                    "x": 90
-                }
-            }
-        }
+        .placementState((event) => 
+            event.set(BlockProperties.AXIS, event.clickedFace.axis))
     })
