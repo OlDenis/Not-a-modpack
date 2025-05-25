@@ -1,0 +1,50 @@
+{
+    "type": "rechiseled:chiseling",
+    "entries": [
+        {
+            "item": "kubejs:deepstone"
+        },
+        {
+            "item": "kubejs:chiseled_deepstone"
+        },
+        {
+            "item": "kubejs:cut_deepstone"
+        },
+        {
+            "item": "kubejs:smooth_deepstone"
+        },
+        {
+            "connecting_item": "kubejs:deepstone_brick_pattern_connecting",
+            "item": "kubejs:deepstone_brick_pattern"
+        },
+        {
+            "connecting_item": "kubejs:deepstone_brick_paving_connecting",
+            "item": "kubejs:deepstone_brick_paving"
+        },
+        {
+            "connecting_item": "kubejs:deepstone_bricks_connecting",
+            "item": "kubejs:deepstone_bricks"
+        },
+        {
+            "connecting_item": "kubejs:deepstone_diagonal_bricks_connecting",
+            "item": "kubejs:deepstone_diagonal_bricks"
+        },
+        {
+            "connecting_item": "kubejs:deepstone_large_tiles_connecting",
+            "item": "kubejs:deepstone_large_tiles"
+        },
+        {
+            "connecting_item": "kubejs:deepstone_polished_connecting",
+            "item": "kubejs:deepstone_polished"
+        },
+        {
+            "connecting_item": "kubejs:deepstone_rotated_bricks_connecting",
+            "item": "kubejs:deepstone_rotated_bricks"
+        },
+        {
+            "connecting_item": "kubejs:deepstone_tiles_connecting",
+            "item": "kubejs:deepstone_tiles"
+        }
+    ],
+    "overwrite": false
+}

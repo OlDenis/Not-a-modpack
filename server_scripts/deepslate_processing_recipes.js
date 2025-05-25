@@ -1,4 +1,4 @@
-// requires: create, create_d2d
+// requires: create, create_d2d, rechiseled
 // priority: 2
 
 // This script adds crushing recipes for deepslate blocks
