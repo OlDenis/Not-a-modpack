@@ -7,7 +7,9 @@ let rechiseled_ds_names = {
     "diagonal_bricks": "Diagonal Deepstone Bricks",
     "large_tiles" : "Large Deepstone Tiles",
     "polished": "Polished Deepstone",
-    "rotated_bricks": "Rotated Deepstone Bricks"
+    "rotated_bricks": "Rotated Deepstone Bricks",
+    "brick_paving": "Deepstone Brick Paving",
+    "brick_pattern": "Deepstone Brick Pattern"
 }
 
 StartupEvents.registry('block', event => {

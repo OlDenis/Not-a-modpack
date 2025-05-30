@@ -27,7 +27,7 @@ ItemEvents.modification(event => {
       let modifiedAttributeModifiers = Item.of(item.item().id).attributeModifiers.withModifierAdded(
         "generic.knockback_resistance", { amount: kr, id: armorIDs[i], operation: "add_value" }, armorSlots[i]
       )
-      item.overrideComponent("attribute_modifiers", modifiedAttributeModifiers)
+      item.setAttributeModifiersWithTooltip(modifiedAttributeModifiers.modifiers())
   })}
 });
 
