@@ -29,7 +29,7 @@ ServerEvents.recipes(event => {
             withChance(ds_chunk, 0.15)
         ], 
        cobbled_ds
-    ).id("crushing_cobbled_deepslate");
+    ).processingTime(300).id("crushing_cobbled_deepslate");
 
     // Deepslate to cobbled deepslate
     event.recipes.create.crushing(
@@ -38,7 +38,7 @@ ServerEvents.recipes(event => {
             withChance(ds_chunk, 0.1)
         ],       
         ds
-    ).id("crushing_deepslate");
+    ).processingTime(300).id("crushing_deepslate");
 
     // Cobbled deepslate to deepsand
     event.recipes.create.crushing(
@@ -47,7 +47,7 @@ ServerEvents.recipes(event => {
             withChance(ds_chunk, 0.01)
         ],       
         crushed_ds
-    ).id("deepsand");
+    ).processingTime(300).id("deepsand");
 
     // Deepslate chunks to cobbled deepslate
     event.shaped(
@@ -69,7 +69,7 @@ ServerEvents.recipes(event => {
             withChance("minecraft:iron_nugget", 0.02, 1),
         ], 
         crushed_ds
-    );
+    ).processingTime(100);
 
     // Washing deepsand
     event.recipes.create.splashing(
@@ -81,7 +81,7 @@ ServerEvents.recipes(event => {
             withChance("create_d2d:diamond_shard", 0.005, 1),
         ], 
         "kubejs:deepsand"
-    );
+    ).processingTime(300);
 
     // Deepstone blocks
 

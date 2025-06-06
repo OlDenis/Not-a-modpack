@@ -153,6 +153,41 @@ ServerEvents.recipes(event => {
     for (const material of ss_materials) {
         event.remove({output: 'simplyswords:' + material + '_spear'});                           
     }
+
+    // Simply swords sai
+    for (const material of ['iron', 'gold','diamond']){
+        event.remove({ output: `simplyswords:${material}_sai` });
+        let blade = "#c:gems/diamond";
+        if (material !== "diamond"){
+            blade = `#c:ingots/${material}`;
+        }
+        event.shaped(`simplyswords:${material}_sai`,
+            [
+                " A",
+                "B "
+            ],
+            {
+                "A" : blade,
+                "B" : "samurai_dynasty:knive_handle"
+            }
+        );
+    }
+
+    for (const material of ["", "_netherite"]){
+        event.remove({output: `samurai_dynasty:sai${material}`})
+    }
+
+    // Cinamon
+    // event.replaceInput({ input: 'expandeddelight:cinnamon_stick' },
+    //     'expandeddelight:cinnamon_stick',
+    //     'abyssal_decor:cinnamon_stick'
+    // )
+
+    // event.replaceOutput({ output: 'expandeddelight:cinnamon_stick' },
+    //     'expandeddelight:cinnamon_stick',
+    //     'abyssal_decor:cinnamon_stick'
+    // )
+
     // THIS LINE IS ALSO IMPORTANT!
     // IT MUST BE THE LAST LINE IN THE EVENT HANDLER
     event.recipes.create.finalize();
@@ -162,7 +197,10 @@ ServerEvents.recipes(event => {
 RecipeViewerEvents.removeEntries('item', event => {
     event.remove('cratedelight:apple_crate')
     for (const material of ss_materials) {
-        event.remove('simplyswords:' + material + '_spear')
+        event.remove(`simplyswords:${material}_spear`)
+    }
+    for (const material of ["", "_netherite"]){
+        event.remove(`samurai_dynasty:sai${material}`)
     }
 })
 
