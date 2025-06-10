@@ -176,7 +176,7 @@ let mod_items = {
         "handcrafted": [
             {
                 "id": "pillar_trim",
-                "amount": 1
+                "amount": 2
             },
             {
                 "id": "corner_trim",
@@ -611,6 +611,13 @@ ServerEvents.recipes(event => {
             }
         }
     }
+    // Foxy pillar
+    const foxy_r = sawmillRecipe(event, "minecraft:spruce_logs", "abyssal_decor:foxy_pillar", 1, true)
+    event.custom(foxy_r);
+    // Wood plate
+    const w_plate_r = sawmillRecipe(event, "minecraft:wooden_slabs", "handcrafted:wood_plate", 1, true)
+    event.custom(w_plate_r);
+
 
     // THIS LINE IS ALSO IMPORTANT!
     // IT MUST BE THE LAST LINE IN THE EVENT HANDLER
