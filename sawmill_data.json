@@ -1,0 +1,126 @@
+{
+    "log": {
+        "minecraft": [
+            {
+                "id": "boat",
+                "amount": 1
+            }
+        ],
+        "supplementaries": [
+            {
+                "id": "way_sign",
+                "amount": 4
+            }
+        ],
+        "handcrafted": [
+            {
+                "id": "bench",
+                "amount": 2
+            },
+            {
+                "id": "chair",
+                "amount": 2
+            },
+            {
+                "id": "dining_bench",
+                "amount": 2
+            },
+            {
+                "id": "table",
+                "amount": 2
+            },
+            {
+                "id": "pillar_trim",
+                "amount": 6
+            },
+            {
+                "id": "corner_trim",
+                "amount": 4
+            }
+        ],
+        "luminousworld": [
+            {
+                "id": "table",
+                "amount": 1
+            },
+            {
+                "id": "shelf",
+                "amount": 3
+            },
+            {
+                "id": "log_stack",
+                "amount": 1
+            }
+        ],
+        "createcasing": [
+            {
+                "id": "shaft",
+                "amount": 4
+            }
+        ]
+    },
+    "planks": {
+        "supplementaries": [
+            {
+                "id": "way_sign",
+                "amount": 1
+            }
+        ],
+        "handcrafted": [
+            {
+                "id": "pillar_trim",
+                "amount": 1
+            },
+            {
+                "id": "corner_trim",
+                "amount": 1
+            }
+        ],
+        "decorativepaths": [
+            {
+                "id": "planks_path_01",
+                "amount": 1
+            },
+            {
+                "id": "planks_path_02",
+                "amount": 1
+            },
+            {
+                "id": "planks_path_03",
+                "amount": 1
+            },
+            {
+                "id": "planks_path_04",
+                "amount": 1
+            },
+            {
+                "id": "planks_path_05",
+                "amount": 1
+            },
+            {
+                "id": "planks_path_06",
+                "amount": 1
+            }
+        ],
+        "twilightforest": [
+            {
+                "id": "banister",
+                "amount": 3
+            }
+        ],
+        "farmersdelight": [
+            {
+                "id": "cabinet",
+                "amount": 1
+            }
+        ]
+    },
+    "sign": {
+        "supplementaries": [
+            {
+                "id": "way_sign",
+                "amount": 2
+            }
+        ]
+    }
+}

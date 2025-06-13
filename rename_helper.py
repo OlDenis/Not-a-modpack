@@ -25,8 +25,8 @@ def build_dir(path):
 
 def create_json_file(path, mod, mod_dict):
     build_dir(f'{path}/{mod}/lang')
-    with open(f'{path}/{mod}/lang/en_us.json', 'w') as f:
-        json.dump(mod_dict, f, indent=4)
+    with open(f'{path}/{mod}/lang/en_us.json', 'w', encoding = 'utf8') as f:
+        json.dump(mod_dict, f, indent=4, ensure_ascii=False)
 
             
 
@@ -90,7 +90,7 @@ ss_materials = [
 ]
 # add the items to the dictionary
 for material in ss_materials:
-    ss_dict[f'{mod}:{material}_katana'] = f'{material.capitalize()} Ninjatō'
+    ss_dict[f'item.{mod}.{material}_katana'] = f'{material.capitalize()} Ninjatō'
 create_json_file(path, mod, ss_dict)
 
 """
