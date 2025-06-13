@@ -468,7 +468,7 @@ ServerEvents.recipes(event => {
             A: 'clayworks:terracotta_slab'
         }
     )
-    event.recipes.stonecutting('handcrafted:terracotta_plate', 'clayworks:terracotta_slab')
+    event.recipes.stonecutting('handcrafted:terracotta_plate', 'clayworks:terracotta_slab');
 
     // Vertical vaults
     event.remove({output:"create_connected:item_silo"})
@@ -482,6 +482,10 @@ ServerEvents.recipes(event => {
             B : 'minecraft:barrel'
         }
     )
+
+    // Jade
+    event.recipes.stonecutting('jewelry:jade', 'samurai_dynasty:jade')
+
 
     // THIS LINE IS ALSO IMPORTANT!
     // IT MUST BE THE LAST LINE IN THE EVENT HANDLER

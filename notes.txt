@@ -1,0 +1,229 @@
+Cut 1 : Loot tables of desert_pyramids, buried_treasure, abandoned_mineshaft and jungle_temple are fine
+Loot table substitution don't work...
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2025-04-05     22:50        6880187 abyssal_decor_neoforge_1.21.1_0.1.8.jar.disabled
+-a----        2025-03-22     12:13         195730 AdvancementPlaques-1.21.1-neoforge-1.6.8.jar.disabled
+-a----        2025-03-24     15:00         443799 aethersdelight-0.1.3-1.21.1.jar.disabled
+-a----        2025-04-05     22:38       21493375 alshanex_familiars-1.21.1_v1.1.2_HotFix.jar.disabled
+-a----        2025-03-22     19:58          50425 alternate_current-mc1.21-1.9.0.jar.disabled
+-a----        2025-03-16     19:35        1472888 ambiance-neoforge-1.21-1.1.0.jar.disabled
+-a----        2025-03-24     10:33         844102 amendments-1.21-1.2.24-neoforge.jar.disabled
+-a----        2025-03-16     19:28         229880 animal_feeding_trough-1.1.2+1.21-neoforge.jar.disabled
+-a----        2025-03-09     23:41          57725 appleskin-neoforge-mc1.21-3.0.5.jar.disabled
+-a----        2025-03-24     12:20         604150 Aquaculture-1.21.1-2.7.13.jar.disabled
+-a----        2025-03-24     12:19         213607 aquaculturedelight-1.2.0-neoforge-1.21.1.jar.disabled
+-a----        2025-03-24     09:36         938425 archers-2.4.1+1.21.1.jar.disabled
+-a----        2025-03-16     19:29         263404 ArmorStatues-v21.1.0-1.21.1-NeoForge.jar.disabled
+-a----        2025-03-16     19:22        1030920 arsdelight-2.1.5.jar.disabled
+-a----        2025-04-08     19:06        1403313 ars_additions-1.21.1-21.2.2.jar.disabled
+-a----        2025-03-24     12:03         238375 ars_creo-1.21.1-5.1.0.jar.disabled
+-a----        2025-03-22     20:00         110755 BadOptimizations-2.2.1-1.21.1.jar.disabled
+-a----        2025-03-26     21:45         845557 barbequesdelight-1.2.0+3.jar.disabled
+-a----        2025-03-24     14:30          20197 bcc-21.1.3+mc1.21.1.jar.disabled
+-a----        2025-03-16     18:34         193619 bellsandwhistles-0.4.7-1.21.1.jar.disabled
+-a----        2025-04-05     22:58        2162140 benssharks-1.2.5-neoforge-1.21.1.jar.disabled
+-a----        2025-03-09     23:33         919792 bettercombat-neoforge-2.1.3+1.21.1.jar.disabled
+-a----        2025-03-22     12:58         519238 betterdays-1.21.1-3.1.1.1-NEOFORGE.jar.disabled
+-a----        2025-03-09     23:33         481646 BetterF3-11.0.3-NeoForge-1.21.1.jar.disabled
+-a----        2025-03-24     13:17         441506 betterstats-3.13.8+fabric-1.21.jar.disabled
+-a----        2025-03-09     23:33          71235 BetterTridents-v21.1.0-1.21.1-NeoForge.jar.disabled
+-a----        2025-03-22     17:07          17921 blueflame-1.21.1-1.1.1.jar.disabled
+-a----        2025-03-24     14:35         395642 Bookshelfinspector-1.8+1.21.1.jar.disabled
+-a----        2025-04-13     12:41        1539381 BrewinAndChewin-neoforge-4.2.5+1.21.1.jar.disabled
+-a----        2025-03-09     23:39        5924051 BridgingMod-2.6.2+1.21.1.neoforge-release.jar.disabled
+-a----        2025-03-22     12:35         347647 carryon-neoforge-1.21.1-2.2.2.11.jar.disabled
+-a----        2025-04-15     23:52          81987 chat_heads-0.13.17-neoforge-1.21.jar.disabled
+-a----        2025-04-13     13:23        3074207 Choups_Drakvyrn_Mod_(v2.5.0)_for_1.21.1.jar.disabled
+-a----        2025-03-30     14:10          31920 cloud-layers-1.1+1.21.jar.disabled
+-a----        2025-03-22     19:58          18382 Clumps-neoforge-1.21.1-19.0.0.1.jar.disabled
+-a----        2025-04-15     23:52          59397 Continents_1.21.x_v1.1.8.jar.disabled
+-a----        2025-03-09     23:35        1014626 continuity-3.0.0+1.21.neoforge.jar.disabled
+-a----        2025-03-26     21:29         214013 cratedelight-24.11.22-1.21-neoforge.jar.disabled
+-a----        2025-04-08     19:05        1778267 Create Encased-1.21.1-1.7.1-fix2.jar.disabled
+-a----        2025-04-15     23:52         583780 create-enchantment-industry-2.0.7.jar.disabled
+-a----        2025-04-08     19:06         895062 createframed-1.21.1-1.6.3.jar.disabled
+-a----        2025-03-22     11:41         158961 create_compressed-2.2.0-neoforge-1.21.1.jar.disabled
+-a----        2025-03-16     18:52       18948099 Create_Desires-2-Dreams-1.21.1-2.0.0.jar.disabled
+-a----        2025-04-08     19:06         773300 create_ironworks-3.8.0-neoforge-1.21.1.jar.disabled
+-a----        2025-04-13     20:23        1166588 create_ltab-2.7.0.jar.disabled
+-a----        2025-03-09     23:26         121297 create_oxidized-0.1.3.jar.disabled
+-a----        2025-04-01     23:17         217913 create_pattern_schematics-2.0.6.jar.disabled
+-a----        2025-03-24     11:19        1028338 create_things_and_misc-4.0-neoforge-1.21.1.jar.disabled
+-a----        2025-03-09     23:27         505421 create_trimmed.jar.disabled
+-a----        2025-03-22     11:22         229682 create_ultimate_factory-1.9.0-neoforge-1.21.1.jar.disabled
+-a----        2025-04-01     23:17        2687938 create_vibrant_vaults-0.3.2.jar.disabled
+-a----        2025-03-22     12:41        1185088 CreeperOverhaul-neoforge-1.21.1-4.0.6.jar.disabled
+-a----        2025-04-15     23:52         252240 culturaldelights-0.17.6.jar.disabled
+-a----        2025-03-09     23:41         263380 customizableelytra-neoforge-2.2.8+1.21.jar.disabled
+-a----        2025-03-22     17:12         167853 DiagonalWalls-v21.1.2-1.21.1-NeoForge.jar.disabled
+-a----        2025-04-08     19:04       17943813 DistantHorizons-neoforge-fabric-2.3.2-b-1.21.1.jar.disabled
+-a----        2025-03-22     12:39          67605 doubledoors-1.21.1-6.2.jar.disabled
+-a----        2025-03-24     15:27         183710 dragonloot-1.1.7.jar.disabled
+-a----        2025-03-22     12:36       12337440 DramaticDoors-NeoQuiFab-1.21.1-3.2.7.jar.disabled
+-a----        2025-04-08     19:48         925741 DustyDecorasions_1.21.1NeoForge_V1.0.jar.disabled
+-a----        2025-03-24     14:14        1060520 eating-animation-1.21+1.9.72.jar.disabled
+-a----        2025-03-26     21:44         613974 EggDelight-v1.2-1.21.1.jar.disabled
+-a----        2025-03-16     19:22       12448858 elixirum-neoforge-1.21.1-0.2.2.jar.disabled
+-a----        2025-03-22     16:13         425870 emi_loot-0.7.5+1.21+neoforge.jar.disabled
+-a----        2025-03-09     23:32        1221011 endermanoverhaul-neoforge-1.21.1-2.0.2.jar.disabled
+-a----        2025-03-09     23:24         263222 ends_delight-2.5.1+neoforge.1.21.1.jar.disabled
+-a----        2025-03-09     23:40         445983 entity_model_features_neoforge_1.21.1-2.4.1.jar.disabled
+-a----        2025-03-09     23:40         672734 entity_texture_features_neoforge_1.21.1-6.2.9.jar.disabled
+-a----        2025-04-08     19:06       34030149 eternalstarlight-0.4.2-hotfix+1.21.1+neoforge.jar.disabled
+-a----        2025-03-24     15:03         538489 expandeddelight-0.1.3.1.jar.disabled
+-a----        2025-03-24     14:19          85988 explosiveenhancement-neoforge-1.21.1-1.1.1-client.jar.disabled
+-a----        2025-03-09     23:37         153343 fallingleaves-1.21.1-2.5.1.jar.disabled
+-a----        2025-03-09     23:36         468618 FallingTree-1.21.1-1.21.1.7.jar.disabled
+-a----        2025-03-24     14:57          37999 farmers-cutting-eternal-starlight-1.21.1-2.0-neoforge.jar.disabled
+-a----        2025-03-24     14:57          17255 farmers-cutting-the-aether-1.21.1-1.0-neoforge.jar.disabled
+-a----        2025-03-24     14:57          39901 farmers-cutting-twilight-forest-1.21.1-1.0.jar.disabled
+-a----        2025-04-13     12:58        1588807 fish_of_thieves-mc1.21.1-v4.1.0-neoforge.jar.disabled
+-a----        2025-04-13     20:22         297739 Fog-neoforge-1.7.0-1.21.1.jar.disabled
+-a----        2025-03-26     21:42        1911758 fruitsdelight-1.2.7.jar.disabled
+-a----        2025-03-26     21:42        1911758 fruitsdelight-1.2.7.jar.disabled
+-a----        2025-03-26     21:42        1911758 fruitsdelight-1.2.7.jar.disabled
+-a----        2025-03-22     12:39         317431 gravestone-neoforge-1.21.1-1.0.24.jar.disabled
+-a----        2025-03-24     12:23        7132842 handcrafted-neoforge-1.21.1-4.0.3.jar.disabled
+-a----        2025-04-11     17:27         143772 happy_ghast-3.0.0-neoforge-1.21.1.jar.disabled
+-a----        2025-04-09     21:50        2360446 IllagerInvasion-v21.1.4-1.21.1-NeoForge.jar.disabled
+-a----        2025-03-09     23:32        4267528 Incendium_1.21.x_v5.4.4.jar.disabled
+-a----        2025-04-13     20:23        1265650 InventoryProfilesNext-neoforge-1.21-2.1.7.jar.disabled
+-a----        2025-03-16     19:35        2437216 iris-neoforge-1.8.8+mc1.21.1.jar.disabled
+-a----        2025-03-24     15:12           8116 let-me-crawl-0.1.jar.disabled
+-a----        2025-03-24     09:26          78451 reeses-sodium-options-neoforge-1.8.3+mc1.21.4.jar.disabled
+-a----        2025-03-30     14:10         482516 skinlayers3d-neoforge-1.7.5-mc1.21.jar.disabled
+
+Cut 2 :  Loot tables of desert_pyramids, buried_treasure, abandoned_mineshaft and jungle_temple are fine
+Loot table substitution don't work... because eye.js ignore: true
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2025-03-24     12:20         604150 Aquaculture-1.21.1-2.7.13.jar.disabled
+-a----        2025-03-16     18:34         193619 bellsandwhistles-0.4.7-1.21.1.jar.disabled
+-a----        2025-04-08     19:05        1778267 Create Encased-1.21.1-1.7.1-fix2.jar.disabled
+-a----        2025-04-15     23:52         583780 create-enchantment-industry-2.0.7.jar.disabled
+-a----        2025-04-08     19:06         895062 createframed-1.21.1-1.6.3.jar.disabled
+-a----        2025-03-22     11:41         158961 create_compressed-2.2.0-neoforge-1.21.1.jar.disabled
+-a----        2025-03-16     18:52       18948099 Create_Desires-2-Dreams-1.21.1-2.0.0.jar.disabled
+-a----        2025-04-08     19:06         773300 create_ironworks-3.8.0-neoforge-1.21.1.jar.disabled
+-a----        2025-04-13     20:23        1166588 create_ltab-2.7.0.jar.disabled
+-a----        2025-03-09     23:26         121297 create_oxidized-0.1.3.jar.disabled
+-a----        2025-04-01     23:17         217913 create_pattern_schematics-2.0.6.jar.disabled
+-a----        2025-03-24     11:19        1028338 create_things_and_misc-4.0-neoforge-1.21.1.jar.disabled
+-a----        2025-03-09     23:27         505421 create_trimmed.jar.disabled
+-a----        2025-03-22     11:22         229682 create_ultimate_factory-1.9.0-neoforge-1.21.1.jar.disabled
+-a----        2025-04-01     23:17        2687938 create_vibrant_vaults-0.3.2.jar.disabled
+-a----        2025-03-22     12:41        1185088 CreeperOverhaul-neoforge-1.21.1-4.0.6.jar.disabled
+-a----        2025-04-15     23:52         252240 culturaldelights-0.17.6.jar.disabled
+-a----        2025-03-09     23:41         263380 customizableelytra-neoforge-2.2.8+1.21.jar.disabled
+-a----        2025-03-22     17:12         167853 DiagonalWalls-v21.1.2-1.21.1-NeoForge.jar.disabled
+-a----        2025-04-08     19:04       17943813 DistantHorizons-neoforge-fabric-2.3.2-b-1.21.1.jar.disabled
+-a----        2025-03-22     12:39          67605 doubledoors-1.21.1-6.2.jar.disabled
+-a----        2025-03-24     15:27         183710 dragonloot-1.1.7.jar.disabled
+-a----        2025-03-22     12:36       12337440 DramaticDoors-NeoQuiFab-1.21.1-3.2.7.jar.disabled
+-a----        2025-04-08     19:48         925741 DustyDecorasions_1.21.1NeoForge_V1.0.jar.disabled
+-a----        2025-03-24     14:14        1060520 eating-animation-1.21+1.9.72.jar.disabled
+-a----        2025-03-26     21:44         613974 EggDelight-v1.2-1.21.1.jar.disabled
+-a----        2025-03-09     23:32        1221011 endermanoverhaul-neoforge-1.21.1-2.0.2.jar.disabled
+-a----        2025-03-09     23:24         263222 ends_delight-2.5.1+neoforge.1.21.1.jar.disabled
+-a----        2025-04-08     19:06       34030149 eternalstarlight-0.4.2-hotfix+1.21.1+neoforge.jar.disabled
+-a----        2025-03-24     15:03         538489 expandeddelight-0.1.3.1.jar.disabled
+-a----        2025-03-24     14:19          85988 explosiveenhancement-neoforge-1.21.1-1.1.1-client.jar.disabled
+-a----        2025-03-09     23:37         153343 fallingleaves-1.21.1-2.5.1.jar.disabled
+-a----        2025-03-09     23:36         468618 FallingTree-1.21.1-1.21.1.7.jar.disabled
+-a----        2025-03-24     14:57          37999 farmers-cutting-eternal-starlight-1.21.1-2.0-neoforge.jar.disabled
+-a----        2025-03-24     14:57          17255 farmers-cutting-the-aether-1.21.1-1.0-neoforge.jar.disabled
+-a----        2025-03-24     14:57          39901 farmers-cutting-twilight-forest-1.21.1-1.0.jar.disabled
+-a----        2025-04-13     12:58        1588807 fish_of_thieves-mc1.21.1-v4.1.0-neoforge.jar.disabled
+-a----        2025-04-13     20:22         297739 Fog-neoforge-1.7.0-1.21.1.jar.disabled
+-a----        2025-03-26     21:42        1911758 fruitsdelight-1.2.7.jar.disabled
+-a----        2025-03-22     12:39         317431 gravestone-neoforge-1.21.1-1.0.24.jar.disabled
+-a----        2025-03-24     12:23        7132842 handcrafted-neoforge-1.21.1-4.0.3.jar.disabled
+-a----        2025-04-11     17:27         143772 happy_ghast-3.0.0-neoforge-1.21.1.jar.disabled
+-a----        2025-04-09     21:50        2360446 IllagerInvasion-v21.1.4-1.21.1-NeoForge.jar.disabled
+-a----        2025-03-09     23:32        4267528 Incendium_1.21.x_v5.4.4.jar.disabled
+-a----        2025-04-13     20:23        1265650 InventoryProfilesNext-neoforge-1.21-2.1.7.jar.disabled
+-a----        2025-03-16     19:35        2437216 iris-neoforge-1.8.8+mc1.21.1.jar.disabled
+-a----        2025-03-24     09:26          78451 reeses-sodium-options-neoforge-1.8.3+mc1.21.4.jar.disabled
+-a----        2025-04-08     19:07        1162994 sodium-neoforge-0.6.13+mc1.21.1.jar.disabled
+-a----        2025-03-24     09:26         309122 sodiumoptionsapi-neoforge-1.0.10-1.21.1.jar.disabled
+
+Cut 3 : No problem
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2025-03-24     12:20         604150 Aquaculture-1.21.1-2.7.13.jar.disabled
+-a----        2025-03-24     12:19         213607 aquaculturedelight-1.2.0-neoforge-1.21.1.jar.disabled
+-a----        2025-03-09     23:41         263380 customizableelytra-neoforge-2.2.8+1.21.jar.disabled
+-a----        2025-03-22     17:12         167853 DiagonalWalls-v21.1.2-1.21.1-NeoForge.jar.disabled
+-a----        2025-04-08     19:04       17943813 DistantHorizons-neoforge-fabric-2.3.2-b-1.21.1.jar.disabled
+-a----        2025-03-22     12:39          67605 doubledoors-1.21.1-6.2.jar.disabled
+-a----        2025-03-24     15:27         183710 dragonloot-1.1.7.jar.disabled
+-a----        2025-03-22     12:36       12337440 DramaticDoors-NeoQuiFab-1.21.1-3.2.7.jar.disabled
+-a----        2025-04-08     19:48         925741 DustyDecorasions_1.21.1NeoForge_V1.0.jar.disabled
+-a----        2025-03-24     14:14        1060520 eating-animation-1.21+1.9.72.jar.disabled
+-a----        2025-03-26     21:44         613974 EggDelight-v1.2-1.21.1.jar.disabled
+-a----        2025-03-09     23:32        1221011 endermanoverhaul-neoforge-1.21.1-2.0.2.jar.disabled
+-a----        2025-03-09     23:24         263222 ends_delight-2.5.1+neoforge.1.21.1.jar.disabled
+-a----        2025-04-08     19:06       34030149 eternalstarlight-0.4.2-hotfix+1.21.1+neoforge.jar.disabled
+-a----        2025-03-24     15:03         538489 expandeddelight-0.1.3.1.jar.disabled
+-a----        2025-03-24     14:19          85988 explosiveenhancement-neoforge-1.21.1-1.1.1-client.jar.disabled
+-a----        2025-03-09     23:37         153343 fallingleaves-1.21.1-2.5.1.jar.disabled
+-a----        2025-03-09     23:36         468618 FallingTree-1.21.1-1.21.1.7.jar.disabled
+-a----        2025-03-24     14:57          37999 farmers-cutting-eternal-starlight-1.21.1-2.0-neoforge.jar.disabled
+-a----        2025-03-24     14:57          17255 farmers-cutting-the-aether-1.21.1-1.0-neoforge.jar.disabled
+-a----        2025-03-24     14:57          39901 farmers-cutting-twilight-forest-1.21.1-1.0.jar.disabled
+-a----        2025-04-13     12:58        1588807 fish_of_thieves-mc1.21.1-v4.1.0-neoforge.jar.disabled
+-a----        2025-04-13     20:22         297739 Fog-neoforge-1.7.0-1.21.1.jar.disabled
+-a----        2025-03-26     21:42        1911758 fruitsdelight-1.2.7.jar.disabled
+-a----        2025-03-22     12:39         317431 gravestone-neoforge-1.21.1-1.0.24.jar.disabled
+-a----        2025-03-24     12:23        7132842 handcrafted-neoforge-1.21.1-4.0.3.jar.disabled
+-a----        2025-04-11     17:27         143772 happy_ghast-3.0.0-neoforge-1.21.1.jar.disabled
+-a----        2025-04-09     21:50        2360446 IllagerInvasion-v21.1.4-1.21.1-NeoForge.jar.disabled
+-a----        2025-03-09     23:32        4267528 Incendium_1.21.x_v5.4.4.jar.disabled
+-a----        2025-04-13     20:23        1265650 InventoryProfilesNext-neoforge-1.21-2.1.7.jar.disabled
+-a----        2025-03-16     19:35        2437216 iris-neoforge-1.8.8+mc1.21.1.jar.disabled
+-a----        2025-03-24     09:26          78451 reeses-sodium-options-neoforge-1.8.3+mc1.21.4.jar.disabled
+-a----        2025-04-08     19:07        1162994 sodium-neoforge-0.6.13+mc1.21.1.jar.disabled
+-a----        2025-03-24     09:26         309122 sodiumoptionsapi-neoforge-1.0.10-1.21.1.jar.disabled
+
+Cut 4 : No problems
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2025-03-24     12:20         604150 Aquaculture-1.21.1-2.7.13.jar.disabled
+-a----        2025-03-24     12:19         213607 aquaculturedelight-1.2.0-neoforge-1.21.1.jar.disabled
+-a----        2025-03-24     14:57          37999 farmers-cutting-eternal-starlight-1.21.1-2.0-neoforge.jar.disabled
+-a----        2025-03-24     14:57          17255 farmers-cutting-the-aether-1.21.1-1.0-neoforge.jar.disabled
+-a----        2025-03-24     14:57          39901 farmers-cutting-twilight-forest-1.21.1-1.0.jar.disabled
+-a----        2025-04-13     12:58        1588807 fish_of_thieves-mc1.21.1-v4.1.0-neoforge.jar.disabled
+-a----        2025-04-13     20:22         297739 Fog-neoforge-1.7.0-1.21.1.jar.disabled
+-a----        2025-03-26     21:42        1911758 fruitsdelight-1.2.7.jar.disabled
+-a----        2025-03-22     12:39         317431 gravestone-neoforge-1.21.1-1.0.24.jar.disabled
+-a----        2025-03-24     12:23        7132842 handcrafted-neoforge-1.21.1-4.0.3.jar.disabled
+-a----        2025-04-11     17:27         143772 happy_ghast-3.0.0-neoforge-1.21.1.jar.disabled
+-a----        2025-04-09     21:50        2360446 IllagerInvasion-v21.1.4-1.21.1-NeoForge.jar.disabled
+-a----        2025-03-09     23:32        4267528 Incendium_1.21.x_v5.4.4.jar.disabled
+-a----        2025-04-13     20:23        1265650 InventoryProfilesNext-neoforge-1.21-2.1.7.jar.disabled
+-a----        2025-03-16     19:35        2437216 iris-neoforge-1.8.8+mc1.21.1.jar.disabled
+-a----        2025-03-24     09:26          78451 reeses-sodium-options-neoforge-1.8.3+mc1.21.4.jar.disabled
+-a----        2025-04-08     19:07        1162994 sodium-neoforge-0.6.13+mc1.21.1.jar.disabled
+-a----        2025-03-24     09:26         309122 sodiumoptionsapi-neoforge-1.0.10-1.21.1.jar.disabled
+
+Cut 5 : Added Fish of Thieves and the four structure's loot table are null
+
+Cut 6 : Added every thing but Fish of Thieves and no problems.
+Conclusion: Fish of Thieves erases buried_treasure loot table
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2025-03-24     12:20         604150 Aquaculture-1.21.1-2.7.13.jar.disabled
+-a----        2025-03-24     12:19         213607 aquaculturedelight-1.2.0-neoforge-1.21.1.jar.disabled
+-a----        2025-04-13     12:58        1588807 fish_of_thieves-mc1.21.1-v4.1.0-neoforge.jar.disabled
+-a----        2025-04-13     20:22         297739 Fog-neoforge-1.7.0-1.21.1.jar.disabled
+-a----        2025-03-16     19:35        2437216 iris-neoforge-1.8.8+mc1.21.1.jar.disabled
+-a----        2025-03-24     09:26          78451 reeses-sodium-options-neoforge-1.8.3+mc1.21.4.jar.disabled
+-a----        2025-04-08     19:07        1162994 sodium-neoforge-0.6.13+mc1.21.1.jar.disabled
+-a----        2025-03-24     09:26         309122 sodiumoptionsapi-neoforge-1.0.10-1.21.1.jar.disabled
