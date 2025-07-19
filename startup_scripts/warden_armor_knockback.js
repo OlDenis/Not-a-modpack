@@ -1,4 +1,4 @@
-//ignored: false
+// ignore: true
 
 ItemEvents.modification(event => {
   let kr = 0.2; // Knockback Resistance value

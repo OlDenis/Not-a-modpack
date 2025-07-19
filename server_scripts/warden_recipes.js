@@ -19,16 +19,14 @@ ServerEvents.recipes(event => {
     'hoe'
   ];
 
-  // Adding the Warden armor recipes
+  // Adding the Reinforced echo recipes
   for (let piece of armorPieces) {
-    // Remove the Warden armor recipes
-    event.remove({output: 'deeperdarker:warden_' + piece});
-    // Changing Warden armor recipe
+    // Adding reinforced echo armor recipe
     event.smithing(
-      'deeperdarker:warden_' + piece,                  // arg 1: output
+      'kubejs:reinforced_echo_' + piece,                  // arg 1: output
       'deeperdarker:warden_upgrade_smithing_template', // arg 2: the smithing template
       'create_deep_dark:echo_armor_' + piece,          // arg 3: the item to be upgraded
-      'deeperdarker:reinforced_echo_shard'             // arg 4: the upgrade item
+      'kubejs:reinforced_echo_ingot'             // arg 4: the upgrade item
     );
   }
   // Adding the Warden tools recipes  
@@ -44,41 +42,51 @@ ServerEvents.recipes(event => {
     )
   }
   // Adding Warden hatchet recipe from create : garnished
-    event.remove({output: 'garnished:warden_hatchet'});
+  event.remove({ output: 'garnished:warden_hatchet' });
     event.smithing(
       'garnished:warden_hatchet',                       // arg 1: output
       'deeperdarker:warden_upgrade_smithing_template',  // arg 2: the smithing template
       'garnished:netherite_hatchet',                      // arg 3: the item to be upgraded
       'kubejs:reinforced_echo_ingot'                    // arg 4: the upgrade item
     )
+  
+  // THIS LINE IS IMPORTANT!
+  // IT MUST BE THE FIRST LINE IN THE EVENT HANDLER
+  addCreateRecipeHandler(event);
 
-  // Adding reinforced echo ingot recipe
-  event.custom({
-    type: 'create:mixing',
-    heat_requirement: "superheated",
-    ingredients: [
-      {
-        "type": "fluid_stack",
-        "amount": 250,
-        "fluid": "create_deep_dark:molten_echo"
-      },
-      {item: 'minecraft:phantom_membrane'}, // repeat ingredient to require multiple
-      {item: 'minecraft:phantom_membrane'}, 
-      {item: 'minecraft:phantom_membrane'}, 
-      {item: 'minecraft:phantom_membrane'}, 
-      {item: 'deeperdarker:warden_carapace'},
-      {item: 'deeperdarker:warden_carapace'},
-      {item: 'deeperdarker:warden_carapace'},
-      {item: 'deeperdarker:warden_carapace'},
-      {item: 'create_deep_dark:echo_ingot'}
-    ],
-    results: [
-      {
-        id: 'kubejs:reinforced_echo_ingot',
-        count: 1
-      }
-    ],
-  })
+  event.recipes
+    .createSequencedAssembly(
+      [
+        // start the recipe
+      "kubejs:reinforced_echo_ingot" // output
+      ],
+      "create_deep_dark:echo_ingot", // input
+      [
+        // the transitional item set by "transitionalItem('create:large_cogwheel')" is the item that will be used during the recipe as the item that the input is using to transition to the output.
+        event.recipes.createDeploying("create_deep_dark:echo_ingot", [
+          "create_deep_dark:echo_ingot",
+          'minecraft:phantom_membrane',
+        ]), // like a normal recipe function, is used as a sequence step in this array. Input and output have the transitional item
+        event.recipes.createFilling("create_deep_dark:echo_ingot", [
+          "create_deep_dark:echo_ingot",
+          Fluid.of("create_deep_dark:molten_echo")
+        ]),
+        event.recipes.createPressing("create_deep_dark:echo_ingot", [
+          "create_deep_dark:echo_ingot"
+        ]),
+        event.recipes.createDeploying("create_deep_dark:echo_ingot", [
+          "create_deep_dark:echo_ingot",
+          'deeperdarker:warden_carapace',
+        ])
+      ]
+    )
+    .transitionalItem("create_deep_dark:echo_ingot")
+    .loops(4); // set the transitional item and the loops (amount of repetitions)
+
+
+  // THIS LINE IS ALSO IMPORTANT!
+  // IT MUST BE THE LAST LINE IN THE EVENT HANDLER
+  event.recipes.create.finalize();
 
   // Adding reinforced echo block recipes
   event.shapeless(
