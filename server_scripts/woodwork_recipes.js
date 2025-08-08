@@ -328,6 +328,23 @@ let stem_wood = ["crimson", "warped", "sepia", "bloom"];
 let bamboo_wood = ["bamboo", "powdery"] // Note: has a special type of planks called mosaic
 let log_variants = ["logs", "stems", "blocks"]
 
+// Wood types with missing chest variant
+let missing_chest_variant = [
+    // Luminous
+    'luminousworld:autumnplank',
+    'luminousworld:baobab_plank',
+    'luminousworld:palmplank',
+    'luminousworld:white_oak_plank',
+    // Pastel
+    '#pastel:noxwood_planks',
+    // Expanded Delight
+    // Abyssal Decor
+    // Deeper and Darker
+    // Samuraï Dynasty
+    // The Aether
+    // Garnished
+]
+
 function sawmillRecipe(event, ingredient, result_id, result_amount, is_logs){
     // Returns the correct dict for a sawmill recipe
     // Add sawmill recipes
@@ -426,6 +443,12 @@ function modItemSawmillRecipe(event, mod_items, wood_type, namespace){
 function vanillaItemSawmillRecipe(event, vanilla_items, wood_type, namespace){
     // Register sawmill recipe of vanilla items made of modded wood
     for (const [ingredient_part, vanilla_results] of Object.entries(vanilla_items)) {
+        // Replace logs by stems
+        if (ingredient_part === "logs") {
+            if (stem_wood.includes(wood_type)) {
+                ingredient_part = "stems";
+            }
+        }
         let ingredient = namespace + ":" + wood_type + "_" + ingredient_part;
         // Special tags for aether and ars_nouveau
         if (Object.keys(special_log_tags).includes(namespace)){
@@ -589,10 +612,27 @@ ServerEvents.tags("item", event => {
     event.add("luminousworld:baobab_logs", "luminousworld:bao_bob_log")
     event.add("luminousworld:baobab_logs", "luminousworld:stripped_bao_bab_log")
     event.add("luminousworld:baobab_logs", "luminousworld:stripped_bao_bab_wood")
+
+    // Missing chest variants
+    for (const planks_type of missing_chest_variant){
+        event.add("kubejs:vanilla_chest_ingredient", planks_type)
+    }
 })
 
 
 ServerEvents.recipes(event => {
+    // Add vanilla chest recipe for 
+    event.shaped(
+        'minecraft:chest',
+        [
+            'AAA',
+            'A A',
+            'AAA'
+        ],
+        {
+            'A': '#kubejs:vanilla_chest_ingredient'
+        }
+    )
     // THIS LINE IS IMPORTANT!
     // IT MUST BE THE FIRST LINE IN THE EVENT HANDLER
     addCreateRecipeHandler(event);
