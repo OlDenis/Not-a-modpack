@@ -2,16 +2,16 @@
     "type": "rechiseled:chiseling",
     "entries": [
         {
-            "item": "kubejs:deepstone"
+            "item": "neodsprocessing:deepstone"
         },
         {
-            "item": "kubejs:chiseled_deepstone"
+            "item": "neodsprocessing:chiseled_deepstone"
         },
         {
-            "item": "kubejs:cut_deepstone"
+            "item": "neodsprocessing:cut_deepstone"
         },
         {
-            "item": "kubejs:smooth_deepstone"
+            "item": "neodsprocessing:smooth_deepstone"
         },
         {
             "connecting_item": "kubejs:deepstone_brick_pattern_connecting",

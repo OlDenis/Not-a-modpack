@@ -337,12 +337,8 @@ let missing_chest_variant = [
     'luminousworld:white_oak_plank',
     // Pastel
     '#pastel:noxwood_planks',
-    // Expanded Delight
-    // Abyssal Decor
-    // Deeper and Darker
     // Samuraï Dynasty
-    // The Aether
-    // Garnished
+    'samurai_dynasty:red_maple_planks'
 ]
 
 function sawmillRecipe(event, ingredient, result_id, result_amount, is_logs){
